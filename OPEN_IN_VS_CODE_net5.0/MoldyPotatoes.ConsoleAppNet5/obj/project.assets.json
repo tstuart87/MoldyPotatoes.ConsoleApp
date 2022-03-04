@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "MoldyPotatoes.Repository/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/MoldyPotatoes.Repository.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MoldyPotatoes.Repository.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "MoldyPotatoes.Repository/1.0.0": {
-      "type": "project",
-      "path": "../MoldyPotatoes.Repository/MoldyPotatoes.Repository.csproj",
-      "msbuildProject": "../MoldyPotatoes.Repository/MoldyPotatoes.Repository.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "MoldyPotatoes.Repository >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\stuar\\.nuget\\packages\\": {},
@@ -34,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\MoldyPotatoes.ConsoleApp.csproj",
-      "projectName": "MoldyPotatoes.ConsoleApp",
-      "projectPath": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\MoldyPotatoes.ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE_net5.0\\MoldyPotatoes.ConsoleAppNet5\\MoldyPotatoes.ConsoleAppNet5.csproj",
+      "projectName": "MoldyPotatoes.ConsoleAppNet5",
+      "projectPath": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE_net5.0\\MoldyPotatoes.ConsoleAppNet5\\MoldyPotatoes.ConsoleAppNet5.csproj",
       "packagesPath": "C:\\Users\\stuar\\.nuget\\packages\\",
-      "outputPath": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\obj\\",
+      "outputPath": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE_net5.0\\MoldyPotatoes.ConsoleAppNet5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -50,20 +31,16 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "projectReferences": {
-            "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.Repository\\MoldyPotatoes.Repository.csproj": {
-              "projectPath": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.Repository\\MoldyPotatoes.Repository.csproj"
-            }
-          }
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -73,8 +50,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",
