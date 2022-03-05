@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoldyPotatoes.ConsoleAppNet5.0", "MoldyPotatoes.ConsoleAppNet5.0\MoldyPotatoes.ConsoleAppNet5.0.csproj", "{229FDCB4-132B-4C01-B034-97D40E4335BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoldyPotatoes.ConsoleAppNet5", "MoldyPotatoes.ConsoleAppNet5\MoldyPotatoes.ConsoleAppNet5.csproj", "{6A6DCFF5-0730-4814-8954-9D8F6A26EE11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoldyPotatoes.RepositoryNet5", "MoldyPotatoes.RepositoryNet5\MoldyPotatoes.RepositoryNet5.csproj", "{216AD256-0A34-4A5A-9239-D17023462610}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{229FDCB4-132B-4C01-B034-97D40E4335BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229FDCB4-132B-4C01-B034-97D40E4335BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229FDCB4-132B-4C01-B034-97D40E4335BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229FDCB4-132B-4C01-B034-97D40E4335BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1CAC01-CBFF-4B93-B313-872902744653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1CAC01-CBFF-4B93-B313-872902744653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1CAC01-CBFF-4B93-B313-872902744653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1CAC01-CBFF-4B93-B313-872902744653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6DCFF5-0730-4814-8954-9D8F6A26EE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6DCFF5-0730-4814-8954-9D8F6A26EE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6DCFF5-0730-4814-8954-9D8F6A26EE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6DCFF5-0730-4814-8954-9D8F6A26EE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216AD256-0A34-4A5A-9239-D17023462610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216AD256-0A34-4A5A-9239-D17023462610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216AD256-0A34-4A5A-9239-D17023462610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216AD256-0A34-4A5A-9239-D17023462610}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
