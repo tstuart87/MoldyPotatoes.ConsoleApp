@@ -13,25 +13,27 @@ namespace MoldyPotatoes.Repository
         public string Title { get; set; }
         public string DirectorName { get; set; }
         public Genre MovieGenre { get; set; }
-        private bool IsKidFriendly { get; set; }
+        public bool IsKidFriendly { get; set; }
         public Rating MovieRating { get; set; }
 
-        public Stars { get; set; }
+        public int Stars { get; set; }
 
-    //FULL Constructor
-    public Movie(string title, string directorName, Genre movieGenre, bool isKidFriendly, Rating movieRating, int stars)
-    {
-        //HINT: THERE'S SOMETHING WRONG IN HERE, EVEN THOUGH THERE'S NO RED SQUIGGLY
+        //FULL Constructor
+        public Movie(string title, string directorName, Genre movieGenre, bool isKidFriendly, Rating movieRating, int stars)
+        {
+            //HINT: THERE'S SOMETHING WRONG IN HERE, EVEN THOUGH THERE'S NO RED SQUIGGLY
 
-        Title = Title;
-        DirectorName = directorName;
-        MovieGenre = movieGenre;
-        IsKidFriendly = isKidFriendly;
-        MovieRating = movieRating;
-        Stars = stars;
+            Title = Title;
+            DirectorName = directorName;
+            MovieGenre = movieGenre;
+            IsKidFriendly = isKidFriendly;
+            MovieRating = movieRating;
+            Stars = stars;
+        }
     }
-}
 
-enum Genre { Action, Comedy, Drama, Horror, Romance, RomCom, Thriller, SciFi_Fantasy }
-enum Rating { G, PG, PG_13, R, MA }
+    public enum Genre { Action, Comedy, Drama, Horror, Romance, RomCom, Thriller, SciFi_Fantasy }
+
+    public enum Rating { G, PG, PG_13, R, MA }
+
 }

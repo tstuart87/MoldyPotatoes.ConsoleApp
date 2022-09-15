@@ -30,5 +30,7 @@ namespace MoldyPotatoes.Repository
     }
 
     public enum Genre { Action, Comedy, Drama, Horror, Romance, RomCom, Thriller, SciFi_Fantasy }
+
     public enum Rating { G, PG, PG_13, R, MA }
 }
+

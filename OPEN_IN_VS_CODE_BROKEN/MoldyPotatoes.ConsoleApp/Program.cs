@@ -5,9 +5,9 @@ namespace MoldyPotatoes.ConsoleApp
 {
     class Program
     {
-        static void main(string[] args)
+        static void Main(string[] args)
         {
-            Userinterface ui = new UserInterface();
+            UserInterface ui = new UserInterface();
 
             ui.Run();
         }

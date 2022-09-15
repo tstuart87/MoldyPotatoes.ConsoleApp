@@ -10,3 +10,11 @@ C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.Repository\obj\Debug\net
 C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.dll
 C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.Repository\obj\Debug\net6.0\ref\MoldyPotatoes.Repository.dll
 C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.pdb
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.csproj.AssemblyReference.cache
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.AssemblyInfoInputs.cache
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.AssemblyInfo.cs
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.csproj.CoreCompileInputs.cache
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.dll
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\ref\MoldyPotatoes.Repository.dll
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.Repository\obj\Debug\net6.0\MoldyPotatoes.Repository.pdb

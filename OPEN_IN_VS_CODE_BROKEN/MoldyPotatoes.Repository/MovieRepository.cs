@@ -17,19 +17,19 @@ namespace MoldyPotatoes.Repository
         // CREATE
         public void AddMovieToList(Movie movie)
         {
-            _movieList.Add(movies);
+            _movieList.Add(movie);
         }
 
 
         // READ
         public List<Movie> GetAllMoviesFromList()
         {
-            return _movieList
+            return _movieList;
         }
 
         public Movie GetMovieFromListByTitle(string userInputTitleSearch)
         {
-            foreach (movie in _movieList)
+            foreach (Movie movie in _movieList)
             {
                 if (movie.Title.ToUpper() == userInputTitleSearch.ToUpper())
                 {
@@ -40,7 +40,6 @@ namespace MoldyPotatoes.Repository
             return null;
         }
 
-        / UPDATE
         public bool UpdateMovie(Movie movie)
         {
             foreach (Movie existingMovie in _movieList)
@@ -82,13 +81,12 @@ namespace MoldyPotatoes.Repository
         }
 
 
-
         // DELETE
-        public bool DeleteMovieByTitle(int title)
+        public bool DeleteMovieByTitle(string title)
         {
             foreach (Movie movie in _movieList)
             {
-                if (movie.Title.ToUpper() == title.ToUpper()) ;
+                if (movie.Title.ToUpper() == title.ToUpper())
                 {
                     _movieList.Remove(movie);
                     return true;
@@ -102,7 +100,7 @@ namespace MoldyPotatoes.Repository
 
         public void SeedMovieData()
         {
-            Movie encanto = new Movie("Encanto", "Byron Howard", Genre.Comedy, true, 5, Rating.G);
+            Movie encanto = new Movie("Encanto", "Byron Howard", Genre.Comedy, true, Rating.G, 5);
             Movie dieHard = new Movie("Die Hard", "John McTiernan", Genre.Action, false, Rating.R, 8);
             Movie heGotGame = new Movie("He Got Game", "Spike Lee", Genre.Drama, false, Rating.R, 8);
             Movie ponyo = new Movie("Ponyo", "Hayao Miyazaki", Genre.SciFi_Fantasy, true, Rating.G, 7);

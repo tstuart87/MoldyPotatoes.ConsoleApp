@@ -16,3 +16,6 @@ C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.ConsoleApp\obj\Debug\net
 C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.ConsoleApp\obj\Debug\net6.0\ref\MoldyPotatoes.ConsoleApp.dll
 C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.ConsoleApp\obj\Debug\net6.0\MoldyPotatoes.ConsoleApp.pdb
 C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE\MoldyPotatoes.ConsoleApp\obj\Debug\net6.0\MoldyPotatoes.ConsoleApp.genruntimeconfig.cache
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.ConsoleApp\obj\Debug\net6.0\MoldyPotatoes.ConsoleApp.dll
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.ConsoleApp\obj\Debug\net6.0\ref\MoldyPotatoes.ConsoleApp.dll
+C:\Projects\MoldyPotatoes\OPEN_IN_VS_CODE_BROKEN\MoldyPotatoes.ConsoleApp\obj\Debug\net6.0\MoldyPotatoes.ConsoleApp.pdb

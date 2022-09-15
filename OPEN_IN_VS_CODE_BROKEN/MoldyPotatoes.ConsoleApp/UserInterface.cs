@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MoldyPotatoes.Repository;
 
 namespace MoldyPotatoes.ConsoleApp
 {
@@ -14,7 +15,7 @@ namespace MoldyPotatoes.ConsoleApp
         {
             _movieRepo.SeedMovieData();
 
-            while (isRunnin)
+            while (isRunning)
             {
                 PrintMainMenu();
 
@@ -70,7 +71,7 @@ namespace MoldyPotatoes.ConsoleApp
             }
         }
 
-        private string CreateNewMovie()
+        private void CreateNewMovie()
         {
             Console.WriteLine("Create a NEW MOVIE:");
 
@@ -142,19 +143,19 @@ namespace MoldyPotatoes.ConsoleApp
             switch (ratingSelection)
             {
                 case "1":
-                    rating = G;
+                    rating = Rating.G;
                     break;
                 case "2":
-                    rating = PG;
+                    rating = Rating.PG;
                     break;
                 case "3":
-                    rating = PG_13;
+                    rating = Rating.PG_13;
                     break;
                 case "4":
-                    rating = R;
+                    rating = Rating.R;
                     break;
                 case "5":
-                    rating = MA;
+                    rating = Rating.MA;
                     break;
                 default:
                     break;
@@ -162,7 +163,7 @@ namespace MoldyPotatoes.ConsoleApp
 
             bool isKidFriendly = false;
 
-            if (rating === Rating.G | rating === Rating.PG)
+            if (rating == Rating.G || rating == Rating.PG)
             {
                 isKidFriendly = true;
             }
@@ -171,7 +172,7 @@ namespace MoldyPotatoes.ConsoleApp
             int stars = Convert.ToInt32(GetUserInput());
             //int stars = (int)Console.ReadLine();
 
-            Movie newMovie = new Movie(title, directorName, genre, isKidFriendly, rating, stars);
+            Movie newMovie = new Movie(title, directorName, genre, isKidFriendly, rating, stars); //PIN
 
             _movieRepo.AddMovieToList(newMovie);
         }
@@ -205,7 +206,7 @@ namespace MoldyPotatoes.ConsoleApp
             Console.Write("Please enter a movie title: ");
             string title = GetUserInput();
 
-            Movie movie = movieRepo.GetMovieFromListByTitle(title);
+            Movie movie = _movieRepo.GetMovieFromListByTitle(title);
 
             if (movie != null)
             {
@@ -223,13 +224,14 @@ namespace MoldyPotatoes.ConsoleApp
         private void EditMovie()
         {
             Console.Write("\nPlease enter the title of the movie you'd like to edit: ");
+
             string? title = Console.ReadLine();
 
             Movie movie = _movieRepo.GetMovieFromListByTitle(title);
 
             if (movie != null)
             {
-                PrintAMovie(movie);
+                PrintMovie(movie);
 
                 Console.Write("\n NEW Title: ");
                 string newTitle = GetUserInput();
@@ -323,7 +325,7 @@ namespace MoldyPotatoes.ConsoleApp
                 }
 
                 Console.Write("\nNEW STARS: ");
-                int newStars = GetUserInput();
+                int newStars = Int32.Parse(GetUserInput());
 
                 Movie updatedMovie = new Movie(newTitle, newDirector, newGenre, newIsKidFriendly, newRating, newStars);
 
@@ -335,7 +337,7 @@ namespace MoldyPotatoes.ConsoleApp
                 else
                 {
                     //HINT: THINK ABOUT SCOPE
-                    isSuccess = _movieRepo.UpdateMovie(updatedMovie, movie.Title);
+                    bool isSuccess = _movieRepo.UpdateMovie(updatedMovie, movie.Title);
                     Console.WriteLine($"Successfully updated {updatedMovie.Title}. Press any key to continue....");
                     Console.ReadKey();
                 }

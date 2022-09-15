@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\MoldyPotatoes.ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\MoldyPotatoes.ConsoleApp.csproj",
       "projectName": "MoldyPotatoes.ConsoleApp",
-      "projectPath": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\MoldyPotatoes.ConsoleApp.csproj",
+      "projectPath": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\MoldyPotatoes.ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\stuar\\.nuget\\packages\\",
-      "outputPath": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\obj\\",
+      "outputPath": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -60,8 +60,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.Repository\\MoldyPotatoes.Repository.csproj": {
-              "projectPath": "c:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.Repository\\MoldyPotatoes.Repository.csproj"
+            "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.Repository\\MoldyPotatoes.Repository.csproj": {
+              "projectPath": "C:\\Projects\\MoldyPotatoes\\OPEN_IN_VS_CODE\\MoldyPotatoes.Repository\\MoldyPotatoes.Repository.csproj"
             }
           }
         }

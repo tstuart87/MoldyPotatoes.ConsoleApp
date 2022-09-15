@@ -8,8 +8,18 @@ namespace MoldyPotatoes.ConsoleApp
 {
     public class UserInterface
     {
+        // _print can be set equal to anything that IMPLEMENTS the ICustomConsole INTERFACE.
+        ICustomConsole _print;
+
+        //CONSTRUCTOR
+        // DEPENDENCY INJECTION : _console is injected in the constructor and set equal to _print.
+        public UserInterface(ICustomConsole _console)
+        {
+            _print = _console;
+        }
+
         MovieRepository _movieRepo = new MovieRepository();
-        bool isRunning = true;
+        private bool isRunning = true;
 
         public void Run()
         {
@@ -25,17 +35,12 @@ namespace MoldyPotatoes.ConsoleApp
             }
         }
 
+        //CAN DELETE THIS.
         private void PrintMainMenu()
         {
-            Console.WriteLine("\n1. Add new movie.\n" +
-                    "2. View all movies.\n" +
-                    "3. View one movie.\n" +
-                    "4. Edit movie.\n" +
-                    "5. Delete movie.\n" +
-                    "6. Exit.\n"
-            );
+            _print.MainMenu();
 
-            Console.Write("Enter Selection: ");
+            _print.EnterSelection();
         }
 
         private string GetUserInput()
@@ -73,26 +78,19 @@ namespace MoldyPotatoes.ConsoleApp
 
         private void CreateNewMovie()
         {
-            Console.WriteLine("Create a NEW MOVIE:");
+            _print.CreateNewMovie();
 
-            Console.Write("\nTitle: ");
+            _print.Title();
             string title = GetUserInput();
 
-            Console.Write("\nDirector: ");
+            _print.Director();
             string directorName = GetUserInput();
 
-            Console.WriteLine("\nMovie Genres:\n" +
-                    "1. Action\n" +
-                    "2. Comedy\n" +
-                    "3. Drama\n" +
-                    "4. Horror\n" +
-                    "5. Romance\n" +
-                    "6. RomCom\n" +
-                    "7. Thriller\n" +
-                    "8. SciFi/Fantasy\n"
-            );
+            //I want a method that fits on single line, that cleans all of this up.
 
-            Console.Write("\nSelect Genre: ");
+            _print.AllGenreList();
+
+            _print.SelectGenre();
             string genreSelection = GetUserInput();
 
             Genre genre = Genre.Action;
@@ -127,15 +125,9 @@ namespace MoldyPotatoes.ConsoleApp
                     break;
             }
 
-            Console.WriteLine("\nMovie Rating:\n" +
-                    "1. G\n" +
-                    "2. PG\n" +
-                    "3. PG-13\n" +
-                    "4. R\n" +
-                    "5. MA\n"
-            );
+            _print.AllMovieRatingsList();
 
-            Console.Write("\nSelect Movie Rating: ");
+            _print.SelectMovieRating();
             string ratingSelection = GetUserInput();
 
             Rating rating = Rating.G;
@@ -168,7 +160,7 @@ namespace MoldyPotatoes.ConsoleApp
                 isKidFriendly = true;
             }
 
-            Console.Write("\nNumber of STARS: ");
+            _print.NumberOfStars();
             int stars = Convert.ToInt32(GetUserInput());
             //int stars = (int)Console.ReadLine();
 
@@ -177,15 +169,11 @@ namespace MoldyPotatoes.ConsoleApp
             _movieRepo.AddMovieToList(newMovie);
         }
 
+
+        //CAN DELETE THIS.
         private void PrintMovie(Movie movie)
         {
-            Console.WriteLine($"\n{movie.Title}\n" +
-                    $"Directed by: {movie.DirectorName}\n" +
-                    $"Genre: {movie.MovieGenre}\n" +
-                    $"OK for Kiddos: {movie.IsKidFriendly}\n" +
-                    $"Movie Rating: {movie.MovieRating}\n" +
-                    $"Stars: {movie.Stars}/10\n"
-            );
+            _print.PrintAMovie(movie);
         }
 
         private void ViewAllMovies()
@@ -197,13 +185,13 @@ namespace MoldyPotatoes.ConsoleApp
                 PrintMovie(tomato);
             }
 
-            Console.WriteLine("Press any key to continue....");
+            _print.PressAnyKeyToContinue();
             Console.ReadKey();
         }
 
         private void ViewMovie()
         {
-            Console.Write("Please enter a movie title: ");
+            _print.Title();
             string title = GetUserInput();
 
             Movie movie = _movieRepo.GetMovieFromListByTitle(title);
@@ -211,11 +199,12 @@ namespace MoldyPotatoes.ConsoleApp
             if (movie != null)
             {
                 PrintMovie(movie);
-                Console.WriteLine("\nPress any key to continue....");
+                _print.PressAnyKeyToContinue();
             }
             else
             {
-                Console.WriteLine("We couldn't find that movie. Press any key to continue....");
+                _print.CouldntFindMovie();
+                _print.PressAnyKeyToContinue();
             }
 
             Console.ReadKey();
@@ -223,7 +212,7 @@ namespace MoldyPotatoes.ConsoleApp
 
         private void EditMovie()
         {
-            Console.Write("\nPlease enter the title of the movie you'd like to edit: ");
+            _print.Title();
             string title = Console.ReadLine();
 
             Movie movie = _movieRepo.GetMovieFromListByTitle(title);
@@ -232,23 +221,16 @@ namespace MoldyPotatoes.ConsoleApp
             {
                 PrintMovie(movie);
 
-                Console.Write("\n NEW Title: ");
+                _print.TheWordNew();
+                _print.Title();
                 string newTitle = GetUserInput();
 
-                Console.Write("\nNEW Director: ");
+                _print.Director();
                 string newDirector = GetUserInput();
 
-                Console.WriteLine("\nMovie Genres:\n" +
-                    "1. Action\n" +
-                    "2. Comedy\n" +
-                    "3. Drama\n" +
-                    "4. Horror\n" +
-                    "5. Romance\n" +
-                    "6. RomCom\n" +
-                    "7. Thriller\n" +
-                    "8. SciFi/Fantasy\n");
+                _print.AllGenreList();
 
-                Console.Write("\nSelect NEW Genre: ");
+                _print.SelectGenre();
                 string newGenreSelection = GetUserInput();
 
                 Genre newGenre = movie.MovieGenre;
@@ -283,14 +265,9 @@ namespace MoldyPotatoes.ConsoleApp
                         break;
                 }
 
-                Console.WriteLine("\nMovie Rating:\n" +
-                    "1. G\n" +
-                    "2. PG\n" +
-                    "3. PG-13\n" +
-                    "4. R\n" +
-                    "5. MA\n");
+                _print.AllMovieRatingsList();
 
-                Console.Write("\nSelect NEW Movie Rating: ");
+                _print.SelectMovieRating();
                 string newRatingSelection = GetUserInput();
 
                 Rating newRating = movie.MovieRating;
@@ -323,7 +300,7 @@ namespace MoldyPotatoes.ConsoleApp
                     newIsKidFriendly = true;
                 }
 
-                Console.Write("\nNEW STARS: ");
+                _print.NumberOfStars();
                 int newStars = Convert.ToInt32(GetUserInput());
                 //int stars = (int)Console.ReadLine();
 
@@ -332,38 +309,46 @@ namespace MoldyPotatoes.ConsoleApp
                 if (updatedMovie.Title.ToUpper() == movie.Title.ToUpper())
                 {
                     bool isSuccess = _movieRepo.UpdateMovie(updatedMovie);
-                    Console.WriteLine($"Successfully updated {updatedMovie.Title}. Press any key to continue....");
+                    _print.SuccessfullyUpdated(updatedMovie);
+                    _print.PressAnyKeyToContinue();
+                    Console.ReadKey();
                 }
                 else
                 {
                     bool isSuccess = _movieRepo.UpdateMovie(updatedMovie, movie.Title);
-                    Console.WriteLine($"Successfully updated {updatedMovie.Title}. Press any key to continue....");
+                    _print.SuccessfullyUpdated(updatedMovie);
+                    _print.PressAnyKeyToContinue();
                     Console.ReadKey();
                 }
 
             }
             else
             {
-                Console.WriteLine("We couldn't find that movie. Press any key to continue....");
+                _print.CouldntFindMovie();
+                _print.PressAnyKeyToContinue();
                 Console.ReadKey();
             }
         }
 
         private void DeleteMovie()
         {
-            Console.Write("\nEnter title of movie to delete: ");
+            _print.MovieToDelete();
+            _print.Title();
+
             string input = GetUserInput();
 
             bool isSuccess = _movieRepo.DeleteMovieByTitle(input);
 
             if (isSuccess)
             {
-                Console.WriteLine("Movie successfully deleted. Press any key to continue....");
+                _print.MovieSuccessfullyDeleted();
+                _print.PressAnyKeyToContinue();
                 Console.ReadKey();
             }
             else
             {
-                Console.WriteLine("We couldn't find that movie. Press any key to continue....");
+                _print.CouldntFindMovie();
+                _print.PressAnyKeyToContinue();
                 Console.ReadKey();
             }
 
@@ -371,7 +356,7 @@ namespace MoldyPotatoes.ConsoleApp
 
         public void ExitApplication()
         {
-            Console.WriteLine("We hate to see you go. Press any key to EXIT....");
+            _print.ExitApplication();
             Console.ReadKey();
         }
         //next method
